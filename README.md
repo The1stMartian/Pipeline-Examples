@@ -1,6 +1,7 @@
-# Examples Data Visualizations from my Professional Coding Projects
-<i>Presented here: a flow cytometry analysis pipeline</i><br>
-<i>Additional Pipelines: [Cut-and-Run Seq](https://github.com/The1stMartian/Cut-And-Run-Seq-Demo)</i>
+# Example Data Visualizations from my Professional Coding Projects
+<i>Since much of the code I wrote as part of my bioinformatics consulting job is proprietary I created a page to at least demonstrate the capabilities.
+<i>Presented here: flow cytometry analysis methods (written in R)</i><br>
+<i>Additional Pipelines Demonstrations: [Cut-and-Run Seq](https://github.com/The1stMartian/Cut-And-Run-Seq-Demo)</i>
 
 # Flow Cytometry Analysis (R)
 Technical Overview:
