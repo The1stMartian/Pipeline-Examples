@@ -1,29 +1,29 @@
-# Example Data Visualizations from my Professional Coding Projects
-<i>Since much of the code I wrote as part of my bioinformatics consulting job is proprietary I created a page to at least demonstrate the capabilities.
-<i>Presented here: flow cytometry analysis methods (written in R)</i><br>
-<i>Additional Pipelines Demonstrations: [Cut-and-Run Seq](https://github.com/The1stMartian/Cut-And-Run-Seq-Demo)</i>
+# Professional Coding Project - Example #1
+<i>Because most of the code I've written remains proprietary, I created this page to showcase my experience indirectly via the output data visualizations.<br>
+<i>Presented here: Data visualizations from a flow cytometry analysis pipeline written in R</i><br>
+<i>Pipelines Demonstration #2: [Cut-and-Run Seq](https://github.com/The1stMartian/Cut-And-Run-Seq-Demo)</i>
 
 # Flow Cytometry Analysis (R)
 Technical Overview:
 - Investigation of chimeric antigen receptor NK cells (i.e. <b>CAR-NK cells</b>)
-- Purpose was to investigate the efficiency of CAR-NK creation
+- Purpose: analyze the efficiency of CAR-NK cell creation
 - Actual R code is proprietary (sorry)
 
-## FC Analysis Libraries Used:<br>
-Libraries utilized in my pipeline include:<br>
-- flowCore - to create the flowSet data type
-- flowAI - automated qc
-- flowAssist - flowFrame converter
-- flowCore - apply function for flowsets
-- flowWorkspace - gatingSets, cytoSets 
-- ggcyto - autoplot, ggsave
-- ggplot2 - data visualization 
-- openCyto - flowClust, flowClust2D
-- ggpointdensity - graphing
-- uwot - UMAP dimensionality reduction
-- cytofkit2 - clustering
-- ggridges - Fluorescence density plots
-- flowStats - DataFrame to flowFrame converter
+| Library | Function |
+| :------- | :------ | 
+|flowCore | Creates the flowSet data type|
+|flowAI|Automated qc|
+| flowAssist | FlowFrame converter|
+| flowCore | Apply function for flowsets|
+| flowWorkspace | gatingSets, cytoSets |
+| ggcyto | Autoplot function|
+| ggplot2 | data visualization |
+| openCyto | Automated culstering|
+| ggpointdensity | Graphing|
+| uwot | UMAP dimensionality reduction|
+| cytofkit2 | Clustering|
+| ggridges | Fluorescence density plots|
+| flowStats | DataFrame to flowFrame converter|
 
 ## General Schema:
 - QC: Raw fluorescence batch comparison
@@ -82,3 +82,6 @@ Gating:
 ### Schema:
 - The cells we were examining were immunologically naive. Accordingly, there were few highly differentiated cells, necessitating a "flat" gating scheme. 
 ![Singlets](./fc/schema.jpg)
+
+## Outputs:
+- The general concept in FC analysis is to use a combination of dimensionality reduction and clustering to identify groups of cells in an automated fashion. Next, users typically do a custom analysis of the limited number of cell surface markers to manually assign cell types to each cluster. The program then reports on the number of cells passing each gate, providing quantitative metrics on the experiment.
