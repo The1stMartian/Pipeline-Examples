@@ -71,7 +71,7 @@ Gating:
 
 ### Gene expression investigation (UMAP)
 - To help identify/verify groups of cells, I colored the UMAP projections according the the level of various cell surface markers.<br> 
-![Singlets](./fc/umap_grid.png)
+![Singlets](./fc/UMAP_grid.png)
 
 ### Cluster Identification via Gene Expression Heat Map
 - Clustered heat maps cah help show the similarities/differences between clusters<br>
