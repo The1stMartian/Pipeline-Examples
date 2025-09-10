@@ -1,7 +1,7 @@
 # Professional Coding Project - Example #1
 <i>Because most of the code I've written remains proprietary, I created this page to showcase my experience indirectly via the output data visualizations.<br>
-<i>Presented here: Data visualizations from a flow cytometry analysis pipeline written in R</i><br>
-<i>Pipelines Demonstration #2: [Cut-and-Run Seq](https://github.com/The1stMartian/Cut-And-Run-Seq-Demo)</i>
+<i>Presented here: Data visualizations from a <b>flow cytometry</b> analysis pipeline written in R</i><br><br>
+<i>Additional demonstration: [Cut-and-Run Seq Pipeline](https://github.com/The1stMartian/Cut-And-Run-Seq-Demo)</i>
 
 # Flow Cytometry Analysis (R)
 Technical Overview:
@@ -11,10 +11,9 @@ Technical Overview:
 
 | Library | Function |
 | :------- | :------ | 
-|flowCore | Creates the flowSet data type|
-|flowAI|Automated qc|
+ |flowCore | Creates the flowSet data type|
+ |flowAI|Automated qc|
 | flowAssist | FlowFrame converter|
-| flowCore | Apply function for flowsets|
 | flowWorkspace | gatingSets, cytoSets |
 | ggcyto | Autoplot function|
 | ggplot2 | data visualization |
@@ -53,17 +52,18 @@ Gating:
 - Standard removal of cell doublets<br>
 ![Singlets](./fc/singlets.jpg)
 
-### Step 5+: CD45+ gating for lymphocytes and subsequent two-color gating:
-- Multiple gating steps use 2D gates<br>
+### Step 5+: Two-color gating examples:
+- CD45+ gating for lymphocytes is a typical next step after singlet gating
+- Shown - an example 2-color gating step with gates for multiple quadrants<br>
 - This is an example of multiple gates applid to the same set of cells<br>
 ![Singlets](./fc/gating.jpg)
 
 ### Gating with Multiple Samples:
-- Example of reproducibility of the gating strategy across 46 samples<br>
+- Example of reproducibility of a 2-color gating strategy across 46 normalized samples<br>
 ![Singlets](./fc/manySamples.jpg)
 
 ### Dimensionality Reduction: tSNE (colors by cluster)
-- I tried dimensionality reduction with two different algorithms to see which performed better in terms of computation and distinguishing cell clusters (calculated separately of course). UMAP performed better than tSNS, in accordance with various reports.<br> 
+- I tried dimensionality reduction with two different algorithms to see which performed better in terms of computation time and distinguishing cell clusters (calculated separately of course). UMAP performed better than tSNS, in accordance with various reports.<br> 
 ![Singlets](./fc/tsne.png)
 
 ### Dimensionality Reduction: UMAP (colors by cluster)
@@ -75,6 +75,7 @@ Gating:
 ![Singlets](./fc/UMAP_grid.png)
 
 ### Cluster Identification via Gene Expression Heat Map
+- Clustering was performed using cytofkit2
 - Clustered heat maps cah help show the similarities/differences between clusters<br>
 - This plot is marked by cell surface marker, though those would normally be replaced by the corresponding gene label<br>
 ![Singlets](./fc/clusterTree.jpg)
