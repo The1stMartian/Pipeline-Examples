@@ -85,4 +85,5 @@ Gating:
 ![Singlets](./fc/schema.jpg)
 
 ## Outputs:
-- The general concept in FC analysis is to use a combination of dimensionality reduction and clustering to identify groups of cells in an automated fashion. Next, users typically do a custom analysis of the limited number of cell surface markers to manually assign cell types to each cluster. The program then reports on the number of cells passing each gate, providing quantitative metrics on the experiment.
+- One of the general concepts in completing a FC analysis is to combine dimensionality reduction, clustering, and the users's experimetal design (the chosen cell surface markers) to assign cell identity. The triple combination of allows users to cross-reference the UMAP location with cluster identity. When they match, it provides two independent assessments of the cell grouping, providing assurance that the user-assigned cell identities defined by their cell surface markers are accurate.
+- One of the mechanisms to extract insights is to look at gene expression in different cell types. For example one could examine the fraction of T-cells that express CCR5/CXCR3 and CCR3/CCR4 to subset CD4+ T-cells, providing information on the relative Th1 vs Th2 type cells. 
